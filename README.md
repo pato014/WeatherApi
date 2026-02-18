@@ -104,3 +104,19 @@ View recent logs:
 ```commandline
  sqlite3 db/app.db "SELECT city, timestamp_utc, file_path FROM logs ORDER BY id DESC LIMIT 10;"
   ```
+
+## Running Unite tests
+### Create virtual environment
+```commandline
+python -m venv .venv
+```
+
+### install dependencies:
+```commandline
+pip install -r requirements.txt
+```
+
+###Run unit test:
+```commandline
+python -m pytest -q
+```
