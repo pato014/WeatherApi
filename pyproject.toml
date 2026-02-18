@@ -19,13 +19,6 @@ test = [
   "respx>=0.21",
 ]
 
-[tool.setuptools]
-packages = ["app"]
-
-[build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
