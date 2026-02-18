@@ -33,12 +33,11 @@ jobs:
 
       - name: Run tests
         env:
-          # Avoid failures if anything tries to read settings during import.
-          # Unit tests should mock dependencies anyway.
+
           OPENWEATHER_API_KEY: "test-key"
           REDIS_URL: "redis://localhost:6379/0"
         run: |
-          pytest -q
+          python -m pytest -q
 
       - name: Lint (ruff)
         run: |
